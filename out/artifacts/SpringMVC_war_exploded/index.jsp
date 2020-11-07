@@ -12,9 +12,11 @@
   </head>
   <body>
   <h1>Chaitu Maverick</h1>
-  <form action="">
+  <form action="add">
+    <label>Input 1: </label>
     <input type="text" name="t1">
     <br>
+    <label>Input 2: </label>
     <input type="text" name="t2">
     <br>
     <input type="submit">
