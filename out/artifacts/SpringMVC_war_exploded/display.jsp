@@ -11,6 +11,7 @@
     <title>Result</title>
 </head>
 <body>
-<h1>I'm here in the JSP</h1>
+<h1>Addition of two numbers</h1>
+<h2>Result is: <%= request.getAttribute("result")%></h2>
 </body>
 </html>
