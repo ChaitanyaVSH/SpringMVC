@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 public class AddController {
 
     @RequestMapping("/add")
-    public ModelAndView add (HttpServletRequest request, HttpServletResponse response){
+    public ModelAndView add(HttpServletRequest request, HttpServletResponse response){
         int i = Integer.parseInt(request.getParameter("t1"));
         int j = Integer.parseInt(request.getParameter("t2"));
 
@@ -23,6 +23,20 @@ public class AddController {
         mv.setViewName("display.jsp");
         mv.addObject("result",result);
 
+
+        return mv;
+    }
+
+    @RequestMapping("/subtract")
+    public ModelAndView subtract(HttpServletRequest request, HttpServletResponse response){
+        int i = Integer.parseInt(request.getParameter("s1"));
+        int j = Integer.parseInt(request.getParameter("s2"));
+
+        int result = i-j;
+
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("display.jsp");
+        mv.addObject("result", result);
 
         return mv;
     }

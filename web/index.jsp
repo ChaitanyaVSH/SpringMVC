@@ -8,16 +8,25 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>Chaitu</title>
+    <title>Mathematics</title>
   </head>
   <body>
-  <h1>Chaitu Maverick</h1>
+  <h1>Arithmetic Operations</h1>
   <form action="add">
     <label>Input 1: </label>
-    <input type="text" name="t1">
+    <input type="text" name="t1" required>
     <br>
     <label>Input 2: </label>
-    <input type="text" name="t2">
+    <input type="text" name="t2" required>
+    <br>
+    <input type="submit">
+  </form>
+  <form action="subtract">
+    <label>Input 1: </label>
+    <input type="text" name="s1" required>
+    <br>
+    <label>Input 2: </label>
+    <input type="text" name="s2" required>
     <br>
     <input type="submit">
   </form>

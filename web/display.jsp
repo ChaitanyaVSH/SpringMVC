@@ -13,5 +13,7 @@
 <body>
 <h1>Addition of two numbers</h1>
 <h2>Result is: <%= request.getAttribute("result")%></h2>
+<button onclick="location.href='http://localhost:8080/SpringMVC/'" type="button">
+    Back</button>
 </body>
 </html>
