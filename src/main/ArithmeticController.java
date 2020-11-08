@@ -10,11 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.logging.Logger;
 
-
 @Controller
-public class AddController {
+public class ArithmeticController {
 
-    private final static Logger LOGGER = Logger.getLogger(AddController.class.getName());
+    private final static Logger LOGGER = Logger.getLogger(ArithmeticController.class.getName());
 
     //Autowired searches for the object in the spring container.
     @Autowired
@@ -23,8 +22,7 @@ public class AddController {
     @RequestMapping("/add")
     public ModelAndView add(HttpServletRequest request, HttpServletResponse response){
 
-
-        LOGGER.info("Performing the Addiddtion");
+        LOGGER.info("Performing the Addition");
         int i = Integer.parseInt(request.getParameter("t1"));
         int j = Integer.parseInt(request.getParameter("t2"));
 
@@ -32,9 +30,6 @@ public class AddController {
 //        1. Create a service package with necessary services.
 //        2. Import them here and invoke them with necessary parameters.
 //        int result = i + j;
-
-
-
 
         ModelAndView mv = new ModelAndView();
         mv.setViewName("display");
@@ -49,8 +44,6 @@ public class AddController {
         LOGGER.info("Performing the Subtraction");
         int i = Integer.parseInt(request.getParameter("s1"));
         int j = Integer.parseInt(request.getParameter("s2"));
-
-
 
         ModelAndView mv = new ModelAndView();
         mv.setViewName("display");
