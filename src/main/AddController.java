@@ -1,9 +1,10 @@
 package main;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-import services.ArithmeticService;
+import main.services.ArithmeticService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,13 +16,16 @@ public class AddController {
 
     private final static Logger LOGGER = Logger.getLogger(AddController.class.getName());
 
-    private ArithmeticService arithmeticService = new ArithmeticService();
+    //Autowired searches for the object in the spring container.
+    @Autowired
+    private ArithmeticService arithmeticService;
 
     @RequestMapping("/add")
     public ModelAndView add(HttpServletRequest request, HttpServletResponse response){
 
 
-        int i = Integer.parseInt(request.getParameter("t1"));LOGGER.info("Performing the Addition");
+        LOGGER.info("Performing the Addiddtion");
+        int i = Integer.parseInt(request.getParameter("t1"));
         int j = Integer.parseInt(request.getParameter("t2"));
 
 //        All the service or business logics has to be performed in the service packages.

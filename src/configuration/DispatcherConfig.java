@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
-@ComponentScan({"main"})
+@ComponentScan(basePackages = "main")
 public class DispatcherConfig {
 
     @Bean
@@ -18,4 +18,9 @@ public class DispatcherConfig {
 
         return internalResourceViewResolver;
     }
+
+//    @Bean
+//    public ArithmeticService getArithmeticService(){
+//        return new ArithmeticService();
+//    }
 }

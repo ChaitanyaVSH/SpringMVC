@@ -1,8 +1,11 @@
-package services;
+package main.services;
 
+
+import org.springframework.stereotype.Component;
 
 import java.util.logging.Logger;
 
+@Component
 public class ArithmeticService {
 
     private final static Logger LOGGER = Logger.getLogger(ArithmeticService.class.getName());
