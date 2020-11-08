@@ -49,7 +49,7 @@ public class AddController {
 
 
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("display.jsp");
+        mv.setViewName("display");
         mv.addObject("result", arithmeticService.subtract(i,j));
 
         return mv;
