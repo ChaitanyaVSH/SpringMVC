@@ -33,7 +33,7 @@ public class AddController {
 
 
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("display.jsp");
+        mv.setViewName("display");
         mv.addObject("result",arithmeticService.add(i,j));
 
         return mv;
