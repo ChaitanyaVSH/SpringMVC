@@ -1,5 +1,6 @@
 package main;
 
+import main.annotations.MathematicsRole;
 import main.services.LogicalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.logging.Logger;
 
 @Controller
+@MathematicsRole(role = "Logical Operations", numberOfOperations = 2)
 public class LogicalController {
 
     private final static Logger LOGGER = Logger.getLogger(LogicalController.class.getName());

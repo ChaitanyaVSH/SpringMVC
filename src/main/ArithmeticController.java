@@ -1,5 +1,6 @@
 package main;
 
+import main.annotations.MathematicsRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.logging.Logger;
 
 @Controller
+@MathematicsRole(role = "Arithmetic Operations", numberOfOperations = 2)
 public class ArithmeticController {
 
     private final static Logger LOGGER = Logger.getLogger(ArithmeticController.class.getName());
